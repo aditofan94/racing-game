@@ -4,6 +4,7 @@ public class App {
 
     public static void main( String[] args ) {
 
+
         Race race = new Race();
 
 
@@ -14,7 +15,7 @@ public class App {
         dacia.wheelCount = 4;
         dacia.mileage = 8.5;
         Engine daciaEngine = new Engine();
-        daciaEngine.manufacturer = "France";
+        daciaEngine.manufacturer = "Romania";
         dacia.engine = daciaEngine;
 
 
@@ -28,12 +29,12 @@ public class App {
         ladaEngine.manufacturer = "Russia";
         lada.engine = ladaEngine;
 
+
         race.firstCar = dacia;
         race.secondCar = lada;
 
 
         System.out.println("START RACE");
-
     }
 }
 
