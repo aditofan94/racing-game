@@ -4,9 +4,7 @@ public class App {
 
     public static void main( String[] args ) {
 
-
         Race race = new Race();
-
 
         RadioControlledCar dacia = new RadioControlledCar();
         dacia.name = "Dacia";
@@ -29,12 +27,11 @@ public class App {
         ladaEngine.manufacturer = "Russia";
         lada.engine = ladaEngine;
 
-
         race.firstCar = dacia;
         race.secondCar = lada;
 
+        dacia.accelerate(18.1);
 
-        System.out.println("START RACE");
 
     }
 }
