@@ -6,29 +6,30 @@ public class App {
 
         Race race = new Race();
 
-        RadioControlledCar dacia = new RadioControlledCar();
-        dacia.name = "Dacia";
-        dacia.color = "red";
-        dacia.doorCount = 4;
-        dacia.wheelCount = 4;
-        dacia.mileage = 8.5;
+
         Engine daciaEngine = new Engine();
         daciaEngine.manufacturer = "Romania";
-        dacia.engine = daciaEngine;
+        RadioControlledCar dacia = new RadioControlledCar(daciaEngine);
+        dacia.setName("Dacia");
+        dacia.setColor("red");
+        dacia.setDoorCount(4);
+        dacia.setWheelCount(4);
+        dacia.setMileage(8.5);
 
 
-        RadioControlledCar lada = new RadioControlledCar();
-        lada.name = "Lada";
-        lada.color = "blue";
-        lada.doorCount = 2;
-        lada.wheelCount = 4;
-        lada.mileage = 8;
         Engine ladaEngine = new Engine();
         ladaEngine.manufacturer = "Russia";
-        lada.engine = ladaEngine;
+        RadioControlledCar lada = new RadioControlledCar(ladaEngine);
+        lada.setName("Lada");
+        lada.setColor("blue");
+        lada.setDoorCount(2);
+        lada.setWheelCount(4);
+        lada.setMileage(8);
+
 
         race.firstCar = dacia;
         race.secondCar = lada;
+
 
         dacia.accelerate(18.1);
 
