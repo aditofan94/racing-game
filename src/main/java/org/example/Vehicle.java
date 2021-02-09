@@ -2,6 +2,8 @@ package org.example;
 
 public class Vehicle {
 
+    public static final String CONTROL_TYPE = "Radio Control";
+
     private String name;
     private String color;
     private int wheelCount;
@@ -33,7 +35,14 @@ public class Vehicle {
 
     public void setWheelCount(int wheelCount) {
         this.wheelCount = wheelCount;
-
     }
 
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                ", wheelCount=" + wheelCount +
+                '}';
+    }
 }

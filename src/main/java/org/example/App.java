@@ -1,14 +1,12 @@
 package org.example;
 
+
 public class App {
 
     public static void main( String[] args ) {
 
-        Race race = new Race();
-
-
         Engine daciaEngine = new Engine();
-        daciaEngine.manufacturer = "Romania";
+        daciaEngine.setManufacturer("Romania");
         RadioControlledCar dacia = new RadioControlledCar(daciaEngine);
         dacia.setName("Dacia");
         dacia.setColor("red");
@@ -18,7 +16,7 @@ public class App {
 
 
         Engine ladaEngine = new Engine();
-        ladaEngine.manufacturer = "Russia";
+        ladaEngine.setManufacturer("Russia");
         RadioControlledCar lada = new RadioControlledCar(ladaEngine);
         lada.setName("Lada");
         lada.setColor("blue");
@@ -27,12 +25,9 @@ public class App {
         lada.setMileage(8);
 
 
-        race.firstCar = dacia;
-        race.secondCar = lada;
+        Race race = new Race(dacia, lada);
 
-
-        dacia.accelerate(18.1);
-
+        System.out.println(dacia.toString());
 
     }
 }

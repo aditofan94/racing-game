@@ -10,6 +10,15 @@ public class AutoVehicle extends Vehicle {
         System.out.println("Custom constructor called");
     }
 
+    public AutoVehicle (Engine engine, String name) {
+        this (engine);
+        setName(name);
+    }
+
+    public AutoVehicle () {
+        this (new Engine());
+    }
+
     public Engine getEngine() {
         return engine;
     }
