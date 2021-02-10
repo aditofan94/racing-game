@@ -2,19 +2,20 @@ package org.example;
 
 public class Race {
 
-    private RadioControlledCar firstCar;
-    private RadioControlledCar secondCar;
+    private Vehicle firstCompetitor;
+    private Vehicle secondCompetitor;
 
-    public Race(RadioControlledCar firstCar, RadioControlledCar secondCar) {
-        this.firstCar = firstCar;
-        this.secondCar = secondCar;
+    public Race(Vehicle firstCompetitor, Vehicle secondCompetitor) {
+        this.firstCompetitor = firstCompetitor;
+        this.secondCompetitor = secondCompetitor;
     }
 
-    public RadioControlledCar getFirstCar() {
-        return firstCar;
+    public Vehicle getFirstCompetitor() {
+        return firstCompetitor;
     }
 
-    public RadioControlledCar getSecondCar() {
-        return secondCar;
+    public Vehicle getSecondCompetitor() {
+        return secondCompetitor;
     }
+
 }
