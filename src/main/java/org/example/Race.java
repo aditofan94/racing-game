@@ -2,20 +2,13 @@ package org.example;
 
 public class Race {
 
-    private Vehicle firstCompetitor;
-    private Vehicle secondCompetitor;
+    private Vehicle [] competitors = new Vehicle [10];
 
-    public Race(Vehicle firstCompetitor, Vehicle secondCompetitor) {
-        this.firstCompetitor = firstCompetitor;
-        this.secondCompetitor = secondCompetitor;
+    public Vehicle[] getCompetitors() {
+        return competitors;
     }
 
-    public Vehicle getFirstCompetitor() {
-        return firstCompetitor;
+    public void insertCompetitors (int index, Vehicle vehicle) {
+        competitors [index] = vehicle;
     }
-
-    public Vehicle getSecondCompetitor() {
-        return secondCompetitor;
-    }
-
 }
