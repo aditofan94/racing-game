@@ -8,10 +8,43 @@ public class Vehicle {
     private String color;
     private int wheelCount;
     private double currentSpeed;
+    private double mileage;
+    private double fuelLevel;
 
     public double accelerate (double speed) {
-        currentSpeed += speed;
-        return currentSpeed / 60;
+
+        if (fuelLevel > 0) {
+
+            setCurrentSpeed(getCurrentSpeed() + speed);
+
+            double traveledDistance = getCurrentSpeed() / 60;
+
+            double spentFuel = traveledDistance + mileage / 100;
+
+            fuelLevel -= spentFuel;
+
+            return traveledDistance;
+        } else {
+            System.out.println("Vehicle " + name + " is out of fuel");
+            return 0;
+        }
+    }
+
+
+    public double getMileage() {
+        return mileage;
+    }
+
+    public void setMileage(double mileage) {
+        this.mileage = mileage;
+    }
+
+    public double getFuelLevel() {
+        return fuelLevel;
+    }
+
+    public void setFuelLevel(double fuelLevel) {
+        this.fuelLevel = fuelLevel;
     }
 
     public String getName() {
